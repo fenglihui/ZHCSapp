@@ -1,10 +1,17 @@
 <template>
-  <div>你好</div>
+    <div>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "index"
+      name: "index",
+      data(){
+        return{
+        }
+      },
+      methods:{
+      }
     }
 </script>
 

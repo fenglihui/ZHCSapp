@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/map/main"
+    "pages/map/main",
+    "pages/echarts/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,4 +28,5 @@
       }
     ]
   }
+
 }

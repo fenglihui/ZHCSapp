@@ -1,28 +1,25 @@
 <script>
   import store from '@/utils/store'
-  import market from '@/utils/market'
+  import area from '@/utils/area'
 export default {
     data(){
       return{
-        array:[]
+        array:[],
+        selectArea:[],
+        minHeight:''
       }
     },
   created () {
-    console.log('miniapp created!!!')
     let _this = this
-    market.map(function (item,index) {
-      _this.array.push(item.label)
+    area.map(function (item,index) {
+      _this.selectArea.push(item)
     })
-    store.commit('replace',this.array)
-
-    console.log('array',store.state.market)
-
+    store.commit('selectArea',this.selectArea)
+    _this.minHeight=wx.getSystemInfoSync().windowHeight
+    store.commit('screeHeight',this.minHeight)
   }
 }
 </script>
 
 <style>
-  .container {
-    background-color: #cccccc;
-  }
 </style>
